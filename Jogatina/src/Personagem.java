@@ -1,8 +1,14 @@
-
+import java.util.Random;
 public class Personagem {
 	//atributos
 	String nome;
 	int energia, fome, sono;
+	Random numero = new Random();
+	
+	Boolean test;
+	
+	
+	int comida= 0;
 	
 	//metodos construtores 
 	Personagem(String nome) {
@@ -12,6 +18,9 @@ public class Personagem {
 		this.nome = nome;
 	}
 	
+	public Boolean teste() {
+		return test = numero.nextBoolean();
+	}
 	public String getNome() {
 		return this.nome;
 	}
@@ -25,13 +34,25 @@ public class Personagem {
 	 else { 
 		 System.out.println("Sem energia para caçar");
 			
+		} if (test == true) {
+			System.out.println("Voce achou comida");
+			comida++;
+		}
+		else {
+			System.out.println("Ops, não achou nadinha");
 		}
 	}
+	
 	public void comer() {
 		if(fome > 1) {
-		System.out.println("Está Comendo");
-	}else {
-		System.out.println("Barriguinha Cheia");
+		System.out.println("Está Comendo"); 
+	}else if(comida >= 10) {
+		System.out.println("Barriguinha Cheia"); {
+			
+		} else {
+			System.out.println(" ");
+			
+		}
 	}
 		
 	}
